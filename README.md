@@ -1,1 +1,4 @@
 # WGCNA-Metabolon-Code
+The code provided runs through the steps of generating a weighted gene co-expression network using Metabolon, Inc. data from the Arivale cohort.
+The code is written in R and was original run on a Jupyter Notebook.
+Metabolite values  in the Arivale cohort were median scaled within each batch (run), such that the median value for each metabolite was 1. To adjust for possible batch effects, further normalization across batches was performed by dividing the median-scaled value of each metabolite by the corresponding average value for the same metabolite in quality control samples of the same batch. No imputation or further normalization steps were taken prior to running WGCNA. WGCNA has its own set of filtering parameters to exclude samples and analytes with high number of missing values.
